@@ -1,5 +1,5 @@
 {
-  "name": "next_exam",
+  "name": "test",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,16 +10,9 @@
   },
   "dependencies": {
     "@tosspayments/payment-sdk": "^1.7.1",
-    "@tosspayments/payment-widget-sdk": "^0.10.2",
-    "axios": "^1.7.2",
-    "mobx": "^6.12.4",
-    "mobx-react-lite": "^4.0.7",
-    "nanoid": "^5.0.7",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18",
-    "react-router-dom": "^6.24.0",
-    "swr": "^2.2.5"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "eslint": "^8",

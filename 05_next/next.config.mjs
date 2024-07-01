@@ -21,6 +21,10 @@ const nextConfig = {
             {
                 source : '/api/adminlist',
                 destination : 'http://localhost:8080/api/adminlist'
+            },
+            {
+                source: "/api/userInfo",
+                destination: "http://localhost:8080/api/userInfo"
             }
         ];
     }

@@ -4,11 +4,11 @@ import { useRouter } from "next/navigation";
 import { useContext, useEffect } from "react";
 import TopBar from "../topBar/page";
 import SideBar from "../sideBar/page";
-import UserList from "../userList/page";
 import GuestBook from "../guestBook/page";
 import AdminList from "../adminList/page";
 import { observer } from "mobx-react-lite";
 import { MenuContext } from "@/stores/StoreContext";
+import UserDetail from "../userDetail/page";
 
 function Main() {
 
@@ -28,21 +28,21 @@ function Main() {
     // 선택된 메뉴에 따라 다른 컴포넌트를 임포트해서 랜더링 하기
     const renderContent = () => {
         switch(menuStore.selectedMenu){
-            case "userList" :
-                return <UserList />
+            case "userDetail" :
+                return <UserDetail />
             case "guestBook" :
                 // GuestBook 컴포넌트 랜더링
                 return <GuestBook guestBook={menuStore.guestBook} />
             case "adminList" :
                 return <AdminList adminList={menuStore.adminList} />
             default :
-                return <UserList />
+                return <UserDetail />
         }
     }
 
     return(
         <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-
+            
             <TopBar sideBarOpen={menuStore.sideBarOpen} />
 
             <div style={{ display: 'flex', flex: 1 }}>

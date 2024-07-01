@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx"
 
 class MenuStore {
     // 메뉴 선택
-    selectedMenu = "userList"
+    selectedMenu = "userDetail"
     // 사이드바 on/off
     sideBarOpen = true
     // 사용자 인증 상태
@@ -13,6 +13,18 @@ class MenuStore {
     guestBook = []
     // 관리자 리스트
     adminList = []
+    // 유저 정보
+    userInfo  ={
+        id : '',
+        name : '',
+        email : '',
+        phone : '',
+        provider : '',
+        kakao : '',
+        naver : '',
+        google: '',
+
+    }
 
     constructor(){
         // MobX 스토어를 자동으로 관찰 가능하게 설정
@@ -60,6 +72,11 @@ class MenuStore {
     // 관리자 리스트
     setAdminList(adminList){
         this.adminList = adminList
+    }
+
+    // 유저 정보
+    setUserInfo(userInfo){
+        this.userInfo = userInfo;
     }
 
 }

@@ -13,6 +13,8 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.19",
     "@mui/material": "^5.15.19",
+    "@tosspayments/payment-sdk": "^1.7.1",
+    "@tosspayments/payment-widget-sdk": "^0.10.2",
     "axios": "^1.7.2",
     "mobx": "^6.12.3",
     "mobx-react-lite": "^4.0.7",

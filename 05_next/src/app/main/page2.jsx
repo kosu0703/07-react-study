@@ -9,6 +9,7 @@ import GuestBook from "../guestBook/page";
 import AdminList from "../adminList/page";
 import { observer } from "mobx-react-lite";
 import { MenuContext } from "@/stores/StoreContext";
+import UserDetail from "../userDetail/page";
 
 // 보통은 옵저버로 전체를 감싸서, 이것을 상태관리하고 있어라고 사용한다.
 const Main = observer(() => {
@@ -29,14 +30,14 @@ const Main = observer(() => {
     // 선택된 메뉴에 따라 다른 컴포넌트를 임포트해서 랜더링 하기
     const renderContent = () => {
         switch(menuStore.selectedMenu){
-            case "userList" :
-                return <UserList />
+            case "userDetail" :
+                return <UserDetail />
             case "guestBook" :
                 return <GuestBook />
             case "adminList" :
                 return <AdminList />
             default :
-                return <UserList />
+                return <UserDetail />
         }
     }
 

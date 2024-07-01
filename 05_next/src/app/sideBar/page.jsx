@@ -49,9 +49,9 @@ function SideBar() {
             <Toolbar />
             <List>
                 {/* 상태값을 바꿔서 전달해줘야 한다. */}
-                <ListItemButton onClick={() => handleMenuClick("userList")}>
+                <ListItemButton onClick={() => handleMenuClick("userDetail")}>
                     <ListItemIcon><AccountCircle/></ListItemIcon>
-                    <ListItemText primary="User List" />
+                    <ListItemText primary="User Detail" />
                 </ListItemButton>
                 <ListItemButton onClick={() => handleMenuClick("guestBook")}>
                     <ListItemIcon><AccountCircle/></ListItemIcon>
